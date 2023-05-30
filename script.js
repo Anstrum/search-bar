@@ -1,7 +1,15 @@
 let input = document.querySelector('.search-input')
 let resultContainer = document.querySelector('#search-result-container')
 let content = document.querySelector(".title-list-container")
+let searchButton = document.querySelector('#search-button')
+let searchSection = document.querySelector('.search-section')
 
+searchButton.addEventListener('click', function () {
+    searchSection.classList.toggle('visible')
+    input.focus()
+    input.value = ''
+    resultContainer.innerHTML = ''
+})
 
 
 titleList.forEach(title => {
